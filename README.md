@@ -61,3 +61,17 @@ Then, add an alias to your `.zshrc` config
 # Alias LazyGit
 alias g=lazygit
 ```
+
+## QuteBrowser
+
+Install the browser
+
+```bash
+sudo apt install -y qutebrowser
+```
+
+Copy the config file to `.config/qutebrowser`
+
+```bash
+cp qutebrowser/config.py ~/.config/qutebrowser
+```
