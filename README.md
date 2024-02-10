@@ -75,3 +75,34 @@ Copy the config file to `.config/qutebrowser`
 ```bash
 cp qutebrowser/config.py ~/.config/qutebrowser
 ```
+
+## SSH remote setup
+
+For mounting your main computers storage.
+
+Install SSHFS
+
+```bash
+sudo apt install -y sshfs
+```
+
+Try mounting the remote directory. Remember to change `<HOST USER>` and `<HOST IP>`
+
+```bash
+sudo mkdir /mnt/<HOST USER>
+sudo sshfs -v -o allow_other,default_permissions <HOST USER>@<HOST IP>:/home/<HOST USER>/ /mnt/<HOST USER>
+```
+
+It should prompt you for a password.
+
+Unmount it again
+
+```bash
+sudo umount /mnt/josefs-sun-ultra
+```
+
+Then add the following to `/etc/fstab`. Remember to change `<HOST USER>`, `<HOST IP>` and `<CLIENT USER>`
+
+```
+<HOST USER>@<HOST IP>:/home/jutb /mnt/<HOST USER> fuse.sshfs noauto,x-systemd.automount,_netdev,reconnect,identityfile=/home/<CLIENT USER>/.ssh/id_rsa,allow_other,default_permissions 0 0
+```
