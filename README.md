@@ -64,17 +64,7 @@ alias g=lazygit
 
 ## QuteBrowser
 
-Install the browser
-
-```bash
-sudo apt install -y qutebrowser
-```
-
-Copy the config file to `.config/qutebrowser`
-
-```bash
-cp qutebrowser/config.py ~/.config/qutebrowser
-```
+Follow [this guide](git@github.com:JosefUtbult/Qutebrowser-Setup.git)
 
 ## SSH remote setup
 
