@@ -64,7 +64,7 @@ alias g=lazygit
 
 ## QuteBrowser
 
-Follow [this guide](git@github.com:JosefUtbult/Qutebrowser-Setup.git)
+Follow [this guide](https://github.com/JosefUtbult/Qutebrowser-Setup)
 
 ## SSH remote setup
 
